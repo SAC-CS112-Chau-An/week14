@@ -1,0 +1,24 @@
+package week14_labs;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Test_program {
+
+        public static void main(String[] args) throws Exception {
+
+
+                Dice myDice = new Dice();
+                Card myCard = new Card();
+
+  	myDice.getGeneratedRandomNumber();
+
+	myCard.getGeneratedRandomNumber();
+
+
+
+
+
+}
+
+}
