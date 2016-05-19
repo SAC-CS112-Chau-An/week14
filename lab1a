@@ -1,0 +1,152 @@
+package week14_labs;
+
+public interface week14_labs {
+
+        int getGeneratedRandomNumber() throws Exception;
+
+        String getHistory(); 
+} 
+
+
+
+
+
+package week14_labs;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Card implements week14_labs {
+private int card;
+private ArrayList<Integer> history;
+public static final Random rand = new Random();
+
+
+
+
+
+public Card(int d) {
+
+                dice = d;
+
+                history = new ArrayList<Integer>();
+
+                 }
+	public Card() {
+
+                   this(1);
+
+          }
+
+public void run() {
+
+                int number = rand.nextInt(6 * dice) + 1;
+
+                System.out.println(number);
+
+        }
+
+	public int getGeneratedRandomNumber() throws Exception {
+
+                if ( history.size() > 3)
+                {
+                        throw new Exception();
+                }
+
+                 int number = rand.nextInt(6 * dice) + 1;
+
+                 this.history.add(number);
+
+                  return number;
+
+                  }
+        
+        @Override
+        public String getHistory()
+        {
+
+                String historys = "";
+
+                   for (int roll : history) {
+
+                  historys += roll + ", ";
+
+                     }
+                return historys;
+        }
+
+
+}
+public class Dice implements week14_labs  {
+
+        
+        private int dice;
+	
+        private ArrayList<Integer> history;
+	
+        public static final Random rand = new Random();
+
+	
+        public Dice(int d) {
+
+                dice = d;
+
+                history = new ArrayList<Integer>();
+
+                 }
+
+        public Dice() {
+
+                   this(1);
+
+          }
+
+         public void run() {
+
+                int number = rand.nextInt(6 * dice) + 1;
+
+                System.out.println(number);
+
+        }
+
+        
+       
+         public int getGeneratedRandomNumber() throws Exception {
+
+                if ( history.size() > 3)
+                {
+                        throw new Exception();
+                }
+
+                 int number = rand.nextInt(6 * dice) + 1;
+
+                 this.history.add(number);
+
+                  return number;
+
+                  }
+        
+        @Override
+        public String getHistory()
+        {
+
+                String historys = "";
+
+                   for (int roll : history) {
+
+                  historys += roll + ", ";
+
+                     }
+                return historys;
+        }
+
+}
+
+
+
+
+
+
+
+
+
