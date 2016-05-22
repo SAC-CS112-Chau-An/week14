@@ -1,0 +1,5 @@
+public interface AutoInterface 
+{
+	int rollDice(int lowerBound, int upperBound);
+	int throwDice(int dices);
+}
