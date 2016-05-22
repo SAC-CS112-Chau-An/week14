@@ -1,4 +1,4 @@
-public class Automobile extends Dice
+public class Automobile extends AutoExtend
 {
 
 	private String 	year;
