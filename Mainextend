@@ -1,0 +1,51 @@
+ublic class Test
+{
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner( System.in );
+		
+	
+		Automobile Truck = new Automobile("Zus", 3);
+		Automobile Van = new Automobile("Van", 4);
+		Automobile SportsCar = new Automobile("Lam", 6);
+		
+		Truck.drive(1);
+		Van.drive(1);
+		SportsCar.drive(1);
+		
+		System.out.printf("Distance traveled by the truck is: %.2f %s.", truck.getDistanceTraveled(), "miles");
+		System.out.printf("\nDistance traveled by the van is: %.2f %s.", van.getDistanceTraveled(), "miles");
+		System.out.printf("\nDistance traveled by the sports car is: %.2f %s.\n", sportsCar.getDistanceTraveled(), "miles");
+		
+	
+		System.out.print("\nEnter number of dices: ");
+		int diceNumber = input.nextInt();
+		
+
+		int diceRo1 = Automobile.throwDice(diceNumber);
+		int diceRo2 = Automobile.throwDice(diceNumber);
+		int diceRo3 = Automobile.throwDice(diceNumber);
+		
+	
+		Truck.drive(diceRo1);
+		Van.drive(diceRo2);
+		SportsCar.drive(diceRo3);
+		
+	
+		System.out.printf("\nVehicle make: %s \nVehicle model: %s \nVehicle color: %s "
+				+ "\nDistance traveled: %.2f %s. \nNumber of gears: %d\n",
+				truck.getMake(), truck.getModel(), truck.getColor(), truck.getDistanceTraveled(),
+				"miles", truck.getNumberOfGears());
+		
+		System.out.printf("\nVehicle make: %s \nVehicle model: %s \nVehicle color: %s "
+				+ "\nDistance traveled: %.2f %s. \nNumber of gears: %d\n",
+				van.getMake(), van.getModel(), van.getColor(), van.getDistanceTraveled(),
+				"miles", van.getNumberOfGears());
+		
+		System.out.printf("\nVehicle make: %s \nVehicle model: %s \nVehicle color: %s "
+				+ "\nDistance traveled: %.2f %s. \nNumber of gears: %d\n",
+				sportsCar.getMake(), sportsCar.getModel(), sportsCar.getColor(), sportsCar.getDistanceTraveled(),
+				"miles", sportsCar.getNumberOfGears());
+		
+	}
+}
